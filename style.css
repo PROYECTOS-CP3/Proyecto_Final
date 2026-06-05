@@ -1,0 +1,1015 @@
+/* ========================================
+RESET
+======================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.prueba{
+  background: red;
+}
+
+/* ========================================
+VARIABLES
+======================================== */
+
+:root{
+
+  --bg:#7a7a7e70;
+
+  --white:#a09797;
+
+  --text:#0f172a;
+
+  --muted:#64748b;
+
+  --primary:#6119e8;
+
+  --primary-hover:#4600e8f8;
+
+  --success:#10b981;
+
+  --danger:#ef4444;
+
+  --border:#232426;
+
+}
+
+
+/* ========================================
+BODY
+======================================== */
+
+body{
+
+  font-family:'Inter', sans-serif;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+}
+/* ========================================
+NAVBAR
+======================================== */
+
+nav{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:100;
+
+  background:#0f172a;
+
+  padding:20px 0;
+
+}
+
+
+.nav-container{
+
+  width:90%;
+
+  max-width:1400px;
+
+  margin:auto;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+
+.logo{
+
+  font-size:28px;
+
+  font-weight:700;
+
+  color:white;
+
+}
+
+
+.logo span{
+
+  color:var(--primary);
+
+}
+
+
+.nav-actions{
+
+  display:flex;
+
+  gap:15px;
+
+}
+
+
+.account-btn{
+
+  border:none;
+
+  background:var(--primary);
+
+  color:white;
+
+  padding:12px 20px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+}
+
+
+.account-btn:hover{
+
+  background:var(--primary-hover);
+
+}
+
+
+/* ========================================
+HERO
+======================================== */
+
+.hero{
+
+  height:420px;
+
+  background:
+  linear-gradient(
+    rgba(15,23,42,0.7),
+    rgba(15,23,42,0.7)
+  ),
+
+  url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1400&auto=format&fit=crop");
+
+  background-size:cover;
+
+  background-position:center;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+
+  padding:20px;
+
+}
+
+
+.hero-content{
+
+  max-width:700px;
+
+}
+
+
+.hero h1{
+
+  font-size:64px;
+
+  margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+  font-size:18px;
+
+  line-height:1.6;
+
+  margin-bottom:30px;
+
+}
+
+
+.hero button{
+
+  border:none;
+
+  background:var(--primary);
+
+  color:white;
+
+  padding:16px 30px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+}
+
+
+.hero button:hover{
+
+  background:var(--primary-hover);
+
+}
+
+
+/* ========================================
+FILTROS
+======================================== */
+
+.controls{
+
+  width:90%;
+
+  max-width:1400px;
+
+  margin:auto;
+
+  margin-top:-40px;
+
+  position:relative;
+
+  z-index:20;
+
+}
+
+
+.controls-box{
+
+  background:white;
+
+  border-radius:24px;
+
+  padding:25px;
+
+  display:flex;
+
+  gap:15px;
+
+  flex-wrap:wrap;
+
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+
+}
+
+
+.controls input,
+.controls select{
+
+  flex:1;
+
+  min-width:220px;
+
+  padding:15px;
+
+  border-radius:14px;
+
+  border:1px solid var(--border);
+
+  background:#f8fafc;
+
+  outline:none;
+
+}
+
+
+/* ========================================
+MAIN LAYOUT
+======================================== */
+
+.main-layout{
+
+  width:90%;
+
+  max-width:1400px;
+
+  margin:50px auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 350px;
+
+  gap:30px;
+
+}
+
+
+/* ========================================
+PRODUCTOS
+======================================== */
+
+.products-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(260px,1fr));
+
+  gap:25px;
+
+}
+
+
+/* ========================================
+CARD PRODUCTO
+======================================== */
+
+.product-card{
+
+  background:white;
+  padding: 10px;
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  transition:0.3s;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+
+.product-card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+
+}
+
+
+.product-image{
+
+  height:260px;
+
+  background:white;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:30px;
+
+}
+
+
+.product-image img{
+
+  max-width:100%;
+
+  max-height:100%;
+
+  object-fit:contain;
+
+}
+
+
+.product-info{
+
+  padding:22px;
+
+}
+
+
+.product-category{
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+}
+
+/* FAVORITOS */
+.fav-btn{
+  border: none;
+  background: transparent;
+  font-size:18px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  color: #666;
+}
+.fav-btn.favorited{
+  color: var(--danger);
+}
+
+/* Avatar en navbar */
+.nav-avatar{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  object-fit:cover;
+  vertical-align:middle;
+  margin-right:8px;
+  border:2px solid rgba(255,255,255,0.06);
+}
+
+/* Menú de cuenta (avatar) */
+.account-menu{
+  position: absolute;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border-radius:10px;
+  overflow:hidden;
+  z-index:1500;
+  min-width:160px;
+}
+.account-menu a, .account-menu button{
+  display:block;
+  padding:12px 16px;
+  color:var(--text);
+  text-decoration:none;
+  background:transparent;
+  border:0;
+  text-align:left;
+  width:100%;
+  cursor:pointer;
+}
+.account-menu a:hover, .account-menu button:hover{
+  background:#f3f4f6;
+}
+
+  color:var(--primary);
+
+  margin-bottom:10px;
+
+  font-weight:700;
+
+}
+
+
+.product-title{
+  text-align: center;
+  font-size:18px;
+
+  margin-bottom:15px;
+
+  line-height:1.4;
+
+  min-height:50px;
+
+}
+
+
+.product-price{
+
+  font-size:28px;
+
+  font-weight:700;
+
+  margin-bottom:20px;
+
+}
+
+
+.card-actions{
+
+  display:flex;
+
+  gap:10px;
+
+}
+
+
+/* ========================================
+BOTONES CARD
+======================================== */
+
+.add-btn{
+
+  flex:1;
+
+  border:none;
+
+  background:var(--primary);
+
+  color:white;
+
+  padding:14px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+}
+
+
+.add-btn:hover{
+
+  background:var(--primary-hover);
+
+}
+
+
+.fav-btn{
+
+  width:52px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:#f8fafc;
+
+  cursor:pointer;
+
+  font-size:18px;
+
+  transition:0.3s;
+
+}
+
+
+.fav-btn:hover{
+
+  background:#fee2e2;
+
+}
+
+
+/* ========================================
+CARRITO
+======================================== */
+
+.cart-panel{
+
+  background:white;
+
+  border-radius:24px;
+
+  padding:25px;
+
+  height:fit-content;
+
+  position:sticky;
+
+  top:100px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+
+}
+
+
+.cart-panel h2{
+
+  margin-bottom:25px;
+
+  font-size:28px;
+
+}
+
+
+.cart-item{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:15px 0;
+
+  border-bottom:1px solid var(--border);
+
+}
+
+
+.cart-item-info{
+
+  flex:1;
+
+}
+
+
+.cart-item-title{
+
+  font-size:14px;
+
+  font-weight:600;
+
+  margin-bottom:5px;
+
+}
+
+
+.cart-item-price{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+}
+
+
+.remove-btn{
+
+  width:36px;
+
+  height:36px;
+
+  border:none;
+
+  border-radius:10px;
+
+  background:#fee2e2;
+
+  color:var(--danger);
+
+  cursor:pointer;
+
+  font-weight:bold;
+
+}
+
+
+.cart-total{
+
+  margin-top:25px;
+
+  padding-top:20px;
+
+  border-top:2px solid var(--border);
+
+  display:flex;
+
+  justify-content:space-between;
+
+  font-size:22px;
+
+  font-weight:700;
+
+}
+
+
+/* ========================================
+CHECKOUT BUTTON
+======================================== */
+
+.checkout-btn{
+
+  width:100%;
+
+  margin-top:20px;
+
+  border:none;
+
+  background:var(--success);
+
+  color:white;
+
+  padding:16px;
+
+  border-radius:16px;
+
+  cursor:pointer;
+
+  font-size:16px;
+
+  font-weight:600;
+
+}
+
+
+/* ========================================
+LOGIN MODAL
+======================================== */
+
+.login-modal{
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,0.6);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:999;
+
+}
+
+
+.login-modal.hidden{
+
+  display:none;
+
+}
+
+
+.login-box{
+
+  width:100%;
+
+  max-width:420px;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:28px;
+
+  position:relative;
+
+}
+
+
+.login-box h2{
+
+  font-size:34px;
+
+  margin-bottom:10px;
+
+}
+
+
+.login-box p{
+
+  color:var(--muted);
+
+  margin-bottom:25px;
+
+}
+
+
+.login-box form{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:15px;
+
+}
+
+
+.login-box input{
+
+  padding:16px;
+
+  border-radius:14px;
+
+  border:1px solid var(--border);
+
+  background:#f8fafc;
+
+  outline:none;
+
+}
+
+
+.login-box button[type="submit"]{
+
+  border:none;
+
+  background:var(--primary);
+
+  color:white;
+
+  padding:16px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+}
+
+
+.close-login{
+
+  position:absolute;
+
+  top:15px;
+
+  right:15px;
+
+  width:38px;
+
+  height:38px;
+
+  border:none;
+
+  border-radius:10px;
+
+  background:#f1f5f9;
+
+  cursor:pointer;
+
+}
+
+
+/* ========================================
+FOOTER
+======================================== */
+
+footer{
+
+  margin-top:50px;
+
+  background:#0f172a;
+
+  color:white;
+
+  text-align:center;
+
+  padding:25px;
+
+}
+
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media(max-width:1100px){
+
+  .main-layout{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+
+@media(max-width:768px){
+
+  .hero h1{
+
+    font-size:42px;
+
+  }
+
+}
+
+
+
+/*BOTON DETALLES 
+*/
+
+.details-btn {
+
+   border:none;
+
+  background:var(--primary);
+
+  color:white;
+
+  padding:12px 20px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+  transition:0.3s;
+
+}
+
+
+/*DEPLEGABLE*/
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button (los tres puntitos) */
+.dropdown .account-btn {
+  padding: 12px 16px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Dropdown content (inicialmente oculto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 1000;
+  right: 0;
+  top: 100%;
+  overflow: hidden;
+}
+
+/* Links dentro del dropdown */
+.dropdown-content a {
+  color: var(--text);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary-hover);
+  color: white;
+}
+
+/* Mostrar dropdown al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
+/* Visible class for click toggle (mobile) */
+.dropdown-content.visible{
+  display:block;
+}
+
+/* ============================
+   Admin panel styles
+   ============================ */
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:32px auto;
+}
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:18px;
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-bottom:18px;
+}
+.stat-card{
+  background:white;
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+  text-align:center;
+}
+.table-container{
+  background:white;
+  padding:12px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.04);
+}
+.table-container table{width:100%;border-collapse:collapse}
+.table-container th,.table-container td{padding:10px;border-bottom:1px solid #f1f5f9}
+.product-image{width:56px;height:56px;object-fit:contain}
+.actions button{margin-right:8px;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+.add-btn{background:var(--primary);color:#fff;padding:8px 12px;border-radius:10px;border:none}
+.save-btn{background:var(--success);color:#fff;padding:10px 14px;border-radius:10px;border:none}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center}
+.modal .modal-content{background:white;padding:20px;border-radius:12px;width:420px}
+
+@media(max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .stats{grid-template-columns:1fr}
+}
+
+/* Admin header button */
+.admin-btn, #adminHeaderBtn{
+  border:none;
+  background:var(--primary);
+  color:white;
+  padding:10px 14px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:700;
+}
+.admin-btn:hover, #adminHeaderBtn:hover{ background:var(--primary-hover); }
